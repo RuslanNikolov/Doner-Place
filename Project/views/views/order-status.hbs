@@ -1,0 +1,24 @@
+
+        <main>
+            <h1>Your orders</h1>
+            {{#if orders}}
+            {{#each orders}}
+            <div class="orders">
+                <div class="order">
+                    <span style="border: 1px solid grey"class="order-time">{{this.simpleDateOfOrder}}</span>
+                
+                    <span class="order-category">{{this.category}}</span>
+                        <span class="order-size">{{this.size}} cm</span>
+                    <span class="order-status">{{this.status}}</span>
+
+                    <a href="/orderDetails/{{this._id}}" class="button order-button">Details</a>
+                </div>
+                
+
+            </div>
+            {{/each}}
+            {{else}}
+            <h2>You have no orders</h2>
+            {{/if}}
+        </main>
+        

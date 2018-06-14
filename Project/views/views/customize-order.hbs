@@ -1,0 +1,28 @@
+
+            <h1>Customize your order</h1>
+            <div class="catalog">
+                <div class="column">
+                    <img src="{{found.imageUrl}}" style="width: 130px; height:170px;">
+                </div>
+                <div class="column">
+                    <h2>{{found.category}} - {{found.size}}cm</h2>
+                    <h3>Toppings</h3>
+                    <br>
+                    <div class="toppings">
+                        <form method="post">
+                            {{#each found.toppings}}
+                            <input name="toppings" type="checkbox" value="{{this}}" ><label for="topping">{{this}}</label><br>
+                            
+                            {{/each}}
+                            <br>
+                            <input type="submit" value="Checkout" class="button" style="border:0" />
+                        </form>
+                    </div>
+                    <div>
+				
+			</div>
+                </div>
+            </div>
+    
+       
+    

@@ -1,0 +1,22 @@
+<div class="products">
+    
+                <h2>Chicken duners</h2>
+    
+                {{#each chickenDuners}}
+                
+                <div class="user product-card"><img class="donerImg" src="{{this.imageUrl}}"><a href="/showViewOrder/{{this._id}}" class="button product-title">Order</a></div>
+                {{/each}}
+                <br>
+                <h2>Beef duners</h2>
+                {{#each beefDuners}}
+                <div class="user product-card"><img  class="donerImg" src="{{this.imageUrl}}"><a href="/showViewOrder/{{this._id}}" class="button product-title">Order</a></div>
+                {{/each}}
+                <br>
+                <h2>Lamb duners</h2>
+                {{#each lambDuners}}
+                <div class="user product-card"><img class="donerImg" src="{{this.imageUrl}}"><a href="/showViewOrder/{{this._id}}" class="button product-title">Order</a></div>
+                
+                {{/each}}
+                
+               
+            </div>

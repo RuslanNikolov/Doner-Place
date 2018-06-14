@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Doner Place</title>
+	<link href="static/css/site.css" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+	<div class="container">
+
+		<form method="post">
+			<h2>Create Product</h2>
+			<div>
+				{{#if displayMessage}}
+				<h2 style="color:red;">{{displayMessage}}</h2>
+				{{/if}}
+				<label for="category">Category</label>
+				<select name="category" id="category">
+					<option value="beef">Beef</option>
+					<option value="chicken">Chicken</option>
+					<option value="lamb">Lamb</option>
+				</select>
+			</div>
+			<div>
+				<label for="imageUrl">Image Url</label>
+				<input id="imageUrl" name="imageUrl" type="text">
+			</div>
+			<div>
+				<label for="size">Size</label>
+				<input id="size" placeholder="Between 17 and 24" name="size" type="number">
+				
+			</div>
+			<div>
+				<strong>Toppings</strong>
+				<br>
+				<textarea name="toppings"></textarea>
+			</div>
+				<div>
+					<input type="submit" value="Create" class="button" style="border:0" />
+				</div>
+		</form>
+		</main>
+	
+	</div>
+</body>
+
+</html>

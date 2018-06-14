@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>My Demo Server</title>
+    <link href="/css/site.css" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+                <header>
+            
+            {{#if currentUser}}
+            <ul class="menu">
+				<li><a class="button" href="/">Home</a></li>
+                <li><a class="button" href="/showStatus">Order Status</a></li>
+                {{#if admin}}
+            <li><a class="button" href="/createProduct">Create Product</a></li>
+            <li><a class="button" href="/showOrders">All orders</a></li>
+
+            {{/if}}
+                
+            </ul>
+            
+             <span class="logo">Doner  Place</span>
+             
+            <span class="greeting">Welcome, {{currentUser.username}}!
+               
+                
+                 
+                    <form id="logout-form" action="/logout" method="post"></form>
+                    
+                    <a style="border-bottom: 1px solid black;" href="javascript:document.getElementById('logout-form').submit()">Logout</a>
+            
+                
+            
+            {{else}}
+             <ul class="menu">
+                 <li><a class="button" href="/">Home</a></li>
+            <li><a class="button" href="/login">Login</a></li>
+                <li><a class="button" href="/register">Register</a></li>
+                </ul>
+                {{/if}}
+
+            </ul>
+           
+        </header>
+        <main>
+            {{#if globalError}}
+            <span style="background-color:red ; color: white">This user exists.</span> 
+            
+            {{/if}}
+           
+            {{{body}}}
+        </main>
+    </div>
+</body>
+
+</html>
